@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     # checkout to the commit that has been pushed
-    - uses: actions/checkout@v4.1.7
+    - uses: actions/checkout@v4.2.2
 
     - name: Setup Node
       uses: actions/setup-node@v4
@@ -73,7 +73,7 @@ jobs:
 
     - name: Link Checker
       id: lychee
-      uses: lycheeverse/lychee-action@v1.10.0
+      uses: lycheeverse/lychee-action@v2.0.2
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
       with:
