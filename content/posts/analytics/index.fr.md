@@ -100,7 +100,7 @@ analytics:
 
 ### Umami
 
-[Umami](https://umami.is) est un outil d'analyse open source en total conformité avec le <abbr title="Règlement Général sur la Protection des Données">RGPD</abbr> avec une approche sans cookies. Il peut être installé sur site ou vous pouvez utiliser la version Cloud fournie. Vous pouvez activer le suivi d'Umami en ajoutant les configurations suivantes sous `params.features` section dans le fichier `hugo.yaml`:
+[Umami](https://umami.is) est un outil d'analyse open source en total conformité avec le <abbr title="Règlement Général sur la Protection des Données">RGPD</abbr> avec une approche sans cookies. Il peut être installé sur site ou vous pouvez utiliser la version Cloud fournie. Vous pouvez activer le suivi d'Umami en ajoutant les configurations suivantes sous la section `params.features` dans le fichier `hugo.yaml`:
 
 ```yaml
 analytics:
@@ -114,3 +114,20 @@ analytics:
 ```
 
 où `scheme` est le système (c'est-à-dire: https, http) que vous voulez utiliser pour vous connecter à l'instance, et `instance` est le domaine (ou l'adresse) de votre déploiement, en pointant par défaut sur l'instance cloud de l'<abbr title="Union Européenne">UE</abbr>.
+
+### Statcounter
+
+[Statcounter](https://statcounter.com) est un programme d'analyse et de compteur de page sans publicité. Vous pouvez afficher un compteur de visite sur la page, ou le laisser masqué et consulter les statistiques directement sur le site web de Statcounter.
+Vous pouvez activer l'outil Statcounter en ajoutant les configurations suivantes dans la section `params.features` dans le fichier `config.yaml`:
+
+```yaml
+analytics:
+  enable: true
+  services:
+    # Statcounter Analytics
+  statcounter:
+    project: <your project id>
+    security: <your security code>
+    invisible: 1
+```
+où `project` est l'identifiant du projet, `security` est le code de sécurité fourni par Statcounter, et `invisible` indique si le compteur de visites doit être affiché ou pas sur votre page. `0` pour visible, `1` pour invisible. Invisible est suggéré.

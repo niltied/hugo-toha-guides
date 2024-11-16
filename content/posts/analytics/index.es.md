@@ -115,3 +115,19 @@ analytics:
       id: <su id de Umami>
 ```
 donde `scheme` es el protocolo que quieres usar para conectarte a la instancia (por ejemplo: https, http), e `instance` es el dominio (o dirección) de su implementación, que de forma predeterminada apunta a la instancia de la nube de la <abbr title="Unión Europea">UE</abbr>.
+
+### Statcounter
+
+Statcounter es un programa de contador de páginas y análisis sin publicidad. Puedes mostrar un contador de visitas en la página o dejarlo completamente oculto y consultar las estadísticas directamente en el sitio web de Statcounter.
+Puedes habilitar la herramienta Statcounter añadiendo las siguientes configuraciones en la sección params.features del archivo config.yaml:
+```yaml
+analytics:
+  enable: true
+  services:
+    # Umami Analytics
+    umami:
+      scheme: https
+      instance: analytics.eu.umami.is
+      id: <your Umami website id>
+```
+Donde project es el identificador del proyecto, security es el código de seguridad proporcionado por Statcounter, e invisible indica si el contador de visitas será visible en tu página o no. `0` para visible, `1` para invisible. Invisible es sugerido. 
